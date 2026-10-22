@@ -32,6 +32,10 @@ android {
 
     buildTypes {
         release {
+            // Shrinks code (R8/ProGuard) and removes unused resources to
+            // reduce APK size. Plugin consumer rules cover Realm/ExoPlayer.
+            isMinifyEnabled = true
+            isShrinkResources = true
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")

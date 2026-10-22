@@ -78,7 +78,7 @@ class Hizb extends _Hizb with RealmEntity, RealmObjectBase, RealmObject {
   static Hizb _fromEJson(EJsonValue ejson) {
     if (ejson is! Map<String, dynamic>) return raiseInvalidEJson(ejson);
     return switch (ejson) {
-      {'index': EJsonValue index} => Hizb(
+      {'index': EJsonValue _} => Hizb(
         fromEJson(ejson['index'], defaultValue: 0),
         titleTranslations: fromEJson(
           ejson['titleTranslations'],
@@ -538,7 +538,7 @@ class Sura extends _Sura with RealmEntity, RealmObjectBase, RealmObject {
     if (ejson is! Map<String, dynamic>) return raiseInvalidEJson(ejson);
     return switch (ejson) {
       {
-        'suraNumber': EJsonValue suraNumber,
+        'suraNumber': EJsonValue _,
         'verseCount': EJsonValue verseCount,
         'searchText': EJsonValue searchText,
         'arabicName': EJsonValue arabicName,

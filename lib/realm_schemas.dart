@@ -1,3 +1,7 @@
+// ignore_for_file: camel_case_types
+// (_Quarter_first_verse keeps its snake_case name on purpose: renaming it
+// would change the Realm table name 'Quarter_first_verse' and break the
+// bundled database file.)
 import 'package:realm/realm.dart';
 
 part 'realm_schemas.realm.dart';
